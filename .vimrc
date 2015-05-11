@@ -29,7 +29,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'kien/ctrlp.vim'
 " for search use_like: ctrl + p
 " plugin from https://github.com/kien/ctrlp.vim
-Plugin 'scrooloose/syntastic'
+" Plugin 'scrooloose/syntastic'
 " plugin from https://github.com/scrooloose/syntastic
 Plugin 'tpope/vim-endwise'
 " helps to end certain structures automatically
@@ -69,6 +69,12 @@ filetype plugin indent on    " required
 ""             nerdtree
 "
 """"""""""""""""""""""""""""""""""""""""
+let NERDChristmasTree=0
+let NERDTreeWinSize=22
+let NERDTreeChDirMode=2
+let NERDTreeIgnore=['\~$', '\.pyc$', '\.swp$']
+let NERDTreeWinPos="left"
+
 autocmd vimenter * NERDTree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
@@ -130,13 +136,13 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 ""             scrooloose/syntastic
 "
 """"""""""""""""""""""""""""""""""""""""
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
 """""""""""""""""""""""""""""""""""""""
 "
 ""             vim-ruby
@@ -178,4 +184,3 @@ set nu
 map ff gg=G<CR>
 imap fff <esc>gg=G<CR>
 imap ppp <esc>p
-set listchars=trail:-,tab:--
