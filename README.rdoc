@@ -1,1 +1,8 @@
 vim setting my use
+
+
+first
+
+https://github.com/VundleVim/Vundle.vim
+
+then copy .vimrc
